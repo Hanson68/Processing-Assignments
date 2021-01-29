@@ -1,0 +1,30 @@
+int x,y,r;
+
+void setup() {
+  size(800,600);
+  x = 400 ;
+  y = 300;
+  r = 0;
+}
+
+void draw() {
+  background(135,206,235);
+  translate(x,y);
+    fill(165,42,42);
+  rect(-5,0,10,250);
+  
+  rotate(radians(r));
+  fill(0,128,255);
+  triangle(0,0,100,0,100,100);
+  triangle(0,0,50,50,0,100);
+  fill(255,255,0);
+  triangle(0,0,0,-100,-50,-50);
+  triangle(0,0,-100,0,-100,-100);
+  fill(0,255,0);
+  triangle(0,0,0,100,-100,100);
+  triangle(0,0,-100,0,-50,50);
+  fill(255,0,0);
+  triangle(0,0,100,0,50,-50);
+  triangle(0,0,0,-100,100,-100);
+  r += 1;
+}
